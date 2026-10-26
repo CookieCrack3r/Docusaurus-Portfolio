@@ -20,10 +20,10 @@ export const skills: Skill[] = [
     iconWidth: 70.57,
     iconHeight: 80,
     highlights: [
-      'User-friendly navigation menus',
-      'Responsive web design',
-      'Contact forms and login pages',
-      'Transitions, animations and hover effect',
+      'Semantic page structure',
+      'Accessible markup with ARIA attributes',
+      'Responsive images',
+      'Navigation menus and forms',
     ],
   },
   {
@@ -33,10 +33,10 @@ export const skills: Skill[] = [
     iconWidth: 70.57,
     iconHeight: 80,
     highlights: [
-      'User-friendly navigation menus',
-      'Responsive web design',
-      'Contact forms and login pages',
-      'Transitions, animations and hover effect',
+      'Responsive layouts with Flexbox and Grid',
+      'CSS modules for components',
+      'Design tokens with custom properties',
+      'Transitions and hover effects',
     ],
   },
   {
@@ -46,10 +46,10 @@ export const skills: Skill[] = [
     iconWidth: 80,
     iconHeight: 80,
     highlights: [
-      'search functionality',
-      'static website and customization',
-      'tags, categories, and RSS feeds',
-      'translation',
+      'Docusaurus portfolio and blog',
+      'Documentation in Markdown and MDX',
+      'Custom React components',
+      'Deployment to GitHub Pages',
     ],
   },
   {
@@ -59,10 +59,10 @@ export const skills: Skill[] = [
     iconWidth: 80.35,
     iconHeight: 80,
     highlights: [
-      'Build APIs',
-      'spam filtering, recommendation systems',
-      'automate software testing',
-      'using libraries: Tkinter, Kivy',
+      'Django and Django REST Framework',
+      'REST APIs with an admin panel',
+      'Automated tests',
+      'Code quality with black, isort and flake8',
     ],
   },
   {
@@ -72,10 +72,10 @@ export const skills: Skill[] = [
     iconWidth: 80,
     iconHeight: 80,
     highlights: [
-      'User-friendly navigation menus',
-      'Responsive web design',
-      'Contact forms and login pages',
-      'Animations and hover effect',
+      'Container entrypoint scripts',
+      'Rendering configuration with envsubst',
+      'Waiting for dependent services',
+      'Automating tasks on Linux servers',
     ],
   },
   {
@@ -85,10 +85,10 @@ export const skills: Skill[] = [
     iconWidth: 87.03,
     iconHeight: 80,
     highlights: [
-      'A Kubernetes deployment',
-      'database connections',
-      'environment-specific variables',
-      'complex data structures represent lists and maps',
+      'Docker Compose stacks',
+      'GitHub Actions workflows',
+      'Environment-specific configuration',
+      'Readable, versioned configuration',
     ],
   },
   {
@@ -98,9 +98,10 @@ export const skills: Skill[] = [
     iconWidth: 96,
     iconHeight: 74,
     highlights: [
-      'CI/CD pipelines',
-      'automate building, testing, deploying applications.',
-      'use microservices',
+      'Own images with Dockerfiles',
+      'Docker Compose with named volumes',
+      'Publishing images to GHCR',
+      'Unprivileged containers without secrets',
     ],
   },
   {
@@ -110,10 +111,10 @@ export const skills: Skill[] = [
     iconWidth: 80,
     iconHeight: 80,
     highlights: [
-      'Automated builds and tests',
-      'pre-built actions',
-      'push, pull request, schedule',
-      'Automated deployments',
+      'Automated linting and tests',
+      'Image builds on every push',
+      'Pull request checks',
+      'Deployment to GitHub Pages',
     ],
   },
   {
@@ -123,10 +124,10 @@ export const skills: Skill[] = [
     iconWidth: 80,
     iconHeight: 80,
     highlights: [
-      'simulate attacks and identify vulnerabilities',
-      'Setting up multi-factor authentication',
-      'login security',
-      'Implement authentication & authorization mechanisms',
+      'OWASP Juice Shop challenges',
+      'SSH key authentication and server hardening',
+      'Secrets in environment variables',
+      'Least privilege for services',
     ],
   },
 ];
