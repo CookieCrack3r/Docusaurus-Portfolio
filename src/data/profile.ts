@@ -34,8 +34,8 @@ export const profile: Profile = {
     'Betrieb und Sicherheit – bei Störungen finde ich lieber die Ursache, als nur das Symptom zu beheben.' 
   ].join('\n'),
   portrait: {
-    desktop: '/img/pic.jpeg',
-    mobile: '/imgpic.jpeg',
+    desktop: '/img/hero/portrait.jpeg',
+    mobile: '/img/hero/portrait.jpeg',
     alt: 'Portrait of Martin Friedrich',
   },
   email: 'info@martinfriedrich.org',
