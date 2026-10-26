@@ -2,7 +2,8 @@
   /* Positioned so that page offsets are measured relative to the track. */
   position: relative;
   display: flex;
-  align-items: flex-start;
+  /* All pages get the height of the tallest one. */
+  align-items: stretch;
   gap: 16px;
   padding: 20px 20px 8px;
   overflow-x: auto;

@@ -18,6 +18,8 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 377px));
+  /* Equal row heights, so all skill cards have the same size. */
+  grid-auto-rows: 1fr;
   gap: 34px;
   margin: 0;
   padding: 0;
