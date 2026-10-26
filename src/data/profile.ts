@@ -34,8 +34,8 @@ export const profile: Profile = {
     'Why are you passionate about coding? Do you have a deep interest in games? What is your source of inspiration for improving your programming skills? Are you constantly learning and keeping up to date?',
   ].join('\n'),
   portrait: {
-    desktop: '/img/hero/portrait.webp',
-    mobile: '/img/hero/portrait-mobile.webp',
+    desktop: '/img/pic.jpeg',
+    mobile: '/imgpic.jpeg',
     alt: 'Portrait of Martin Friedrich',
   },
   email: 'info@martinfriedrich.org',
