@@ -27,7 +27,7 @@ This repository contains the source code of a single-page portfolio for a DevSec
 | --- | --- | --- |
 | Header | `src/components/header` | Menu bar that hides while scrolling down and reappears when scrolling up. On small screens it shows a burger button that opens `src/components/mobile-menu`. |
 | Hero | `src/components/hero` | Greeting, name, job title, short introduction, portrait and "Contact me" button. |
-| My Skills | `src/components/my-skills` | Grid of skill cards on desktop (`skill-card`), swipeable carousel with details on mobile (`skill-carousel`). |
+| My Skills | `src/components/my-skills` | Grid of skill cards on desktop that flip on hover, keyboard focus or tap and show the skill's highlights on the back (`skill-card`), swipeable carousel with the same details on mobile (`skill-carousel`). |
 | My Project Highlights | `src/components/my-project-highlights` | Numbered project list with a detail card on desktop, stacked project cards on mobile (`project-card`, `tech-tag`, `more-projects-link`). |
 | Contact | `src/components/contact` | Contact text, e-mail address and LinkedIn link. |
 | Footer | `src/components/footer` | Scroll-to-top button, copyright and link to the legal notice. |
@@ -75,7 +75,7 @@ All content lives in `src/data`. Edit these files and the page updates automatic
 | --- | --- |
 | `src/data/profile.ts` | Name, greeting, job title, "about me" text, portrait, e-mail address, LinkedIn and GitHub links, contact section texts, path of the legal notice page. A `\n` inside a text starts a new line. |
 | `src/data/navigation.ts` | Entries of the menu bar. Each `href` points to the `id` of a section (`/#about-me`, `/#my-skills`, `/#my-projects`, `/#contact`). |
-| `src/data/skills.ts` | Skills shown in the skill grid and carousel: label, short label for mobile, icon and bullet points. `SKILLS_PER_CAROUSEL_PAGE` sets how many skills one carousel page shows. |
+| `src/data/skills.ts` | Skills shown in the skill grid and carousel: label, short label for mobile, icon and bullet points (shown on the back of the desktop cards and in the mobile carousel). `SKILLS_PER_CAROUSEL_PAGE` sets how many skills one carousel page shows. |
 | `src/data/projects.ts` | Projects with name, description, image, technologies, link to the documentation in the Docusaurus blog (`documentationUrl`) and link to the GitHub repository. `INITIAL_PROJECT_INDEX` sets which project is selected first in the desktop list. Projects without `image` show a placeholder tile. |
 | `src/data/technologies.ts` | Technology tags that can be assigned to a project (label and icon). Add a new id to `TechnologyId` to create a new tag. |
 | `src/pages/legal-notice.tsx` | Legal notice ("Impressum") with name, address and contact. |
@@ -197,7 +197,7 @@ Enable it with `sudo ln -s /etc/nginx/sites-available/portfolio /etc/nginx/sites
 │   │   ├── my-project-highlights/ Project section
 │   │   ├── my-skills/             Skill section
 │   │   ├── project-card/          Project details card (desktop and mobile variant)
-│   │   ├── skill-card/            Skill tile of the desktop grid
+│   │   ├── skill-card/            Flipping skill tile of the desktop grid
 │   │   ├── skill-carousel/        Swipeable skill carousel for mobile
 │   │   └── tech-tag/              Technology tag on project cards
 │   ├── css/custom.css             Design tokens, fonts and global styles
