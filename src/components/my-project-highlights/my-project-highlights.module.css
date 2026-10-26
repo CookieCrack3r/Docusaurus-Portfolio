@@ -26,6 +26,20 @@
   gap: 32px;
 }
 
+.panel {
+  display: grid;
+  flex: 0 1 913px;
+  min-width: 0;
+}
+
+.panelCard {
+  grid-area: 1 / 1;
+}
+
+.inactive {
+  visibility: hidden;
+}
+
 .listColumn {
   display: flex;
   flex: 0 0 256px;

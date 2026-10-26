@@ -12,15 +12,15 @@ export interface ProjectCardProps {
   number: number;
   /** featured: wide desktop card next to the project list, compact: stacked mobile card */
   variant: 'featured' | 'compact';
-  id?: string;
+  className?: string;
 }
 
-export default function ProjectCard({project, number, variant, id}: ProjectCardProps): ReactNode {
+export default function ProjectCard({project, number, variant, className}: ProjectCardProps): ReactNode {
   const image = useBaseUrl(project.image ?? '');
   const featured = variant === 'featured';
 
   return (
-    <article id={id} className={clsx(styles.card, styles[variant])} aria-live={featured ? 'polite' : undefined}>
+    <article className={clsx(styles.card, styles[variant], className)}>
       <header className={styles.headline}>
         <h3 className={styles.title}>
           {featured ? `Project ${project.name}` : `${number}.${project.name}`}

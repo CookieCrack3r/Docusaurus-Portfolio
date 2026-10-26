@@ -14,7 +14,6 @@ const PANEL_ID = 'project-details';
 export default function MyProjectHighlights(): ReactNode {
   useBrokenLinks().collectAnchor(SECTION_ID);
   const [selectedIndex, setSelectedIndex] = useState(INITIAL_PROJECT_INDEX);
-  const selectedProject = projects[selectedIndex] ?? projects[0];
 
   return (
     <section id={SECTION_ID} className={styles.section}>
@@ -39,14 +38,18 @@ export default function MyProjectHighlights(): ReactNode {
             </ol>
             <MoreProjectsLink href={profile.githubUrl} />
           </div>
-          {selectedProject && (
-            <ProjectCard
-              id={PANEL_ID}
-              project={selectedProject}
-              number={selectedIndex + 1}
-              variant="featured"
-            />
-          )}
+          {/* All cards share one grid cell so the panel always has the height of the longest project. */}
+          <div id={PANEL_ID} className={styles.panel} aria-live="polite">
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={project.name}
+                project={project}
+                number={index + 1}
+                variant="featured"
+                className={clsx(styles.panelCard, index !== selectedIndex && styles.inactive)}
+              />
+            ))}
+          </div>
         </div>
 
         <div className={styles.mobile}>
