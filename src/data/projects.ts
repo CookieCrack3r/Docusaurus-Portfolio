@@ -9,58 +9,69 @@ export interface Project {
   /** Image path relative to /static. Projects without an image show a placeholder. */
   image?: string;
   technologies: TechnologyId[];
+  /** Project documentation in my Docusaurus blog. */
   documentationUrl: string;
   githubUrl: string;
 }
 
-const PLACEHOLDER_DESCRIPTION = [
-  'Write some information about the project.',
-  'For example: Why are you proud of it?',
-  'What were you able to implement here?',
-  'What different algorithms, server architecture did you use?',
-  'Why did you find this project so interesting?',
-].join('\n');
-
-const DEFAULT_TECHNOLOGIES: TechnologyId[] = ['yaml', 'shell-scripting', 'it-security', 'container'];
+/** Project documentation pages in my Docusaurus blog (repository CookieCrack3r/my-dso-blog). */
+const DOCS_URL = 'https://cookiecrack3r.github.io/my-dso-blog/docs/projects';
 
 export const projects: Project[] = [
   {
     name: 'Baby Tools',
-    description: PLACEHOLDER_DESCRIPTION,
-    technologies: DEFAULT_TECHNOLOGIES,
-    documentationUrl: 'https://github.com/CookieCrack3r/baby-tools-world#readme',
+    description: [
+      'A full stack shop application written in Python with Django.',
+      'I containerized it so it can be built as an image and started with a single docker run command.',
+      'All environment-specific settings are injected at runtime through an .env file.',
+    ].join('\n'),
+    technologies: ['python', 'container', 'ci-cd'],
+    documentationUrl: `${DOCS_URL}/baby-tools`,
     githubUrl: 'https://github.com/CookieCrack3r/baby-tools-world',
   },
   {
     name: 'Truck Signs API',
-    description: PLACEHOLDER_DESCRIPTION,
-    technologies: DEFAULT_TECHNOLOGIES,
-    documentationUrl: 'https://github.com/CookieCrack3r/truck-sign#readme',
+    description: [
+      'The Django REST Framework backend of an online store for truck vinyls.',
+      'GitHub Actions builds the image and publishes it to the GitHub Container Registry.',
+      'Docker Compose runs it together with a PostgreSQL database that is only reachable inside the Compose network.',
+    ].join('\n'),
+    image: '/img/projects/truck-signs.webp',
+    technologies: ['python', 'container', 'ci-cd', 'yaml'],
+    documentationUrl: `${DOCS_URL}/truck-signs-api`,
     githubUrl: 'https://github.com/CookieCrack3r/truck-sign',
   },
   {
-    name: 'Conduit',
-    nameSuffix: '(Container)',
-    description: PLACEHOLDER_DESCRIPTION,
-    image: '/img/projects/conduit.jpg',
-    technologies: DEFAULT_TECHNOLOGIES,
-    documentationUrl: 'https://github.com/CookieCrack3r/conduit-fullstack#readme',
-    githubUrl: 'https://github.com/CookieCrack3r/conduit-fullstack',
+    name: 'Juice Shop Master',
+    description: [
+      'Security challenges in the OWASP Juice Shop, an intentionally insecure web application.',
+      'For each challenge I document the vulnerability, how to exploit it, the risk for a real application and how to fix it.',
+    ].join('\n'),
+    technologies: ['it-security', 'container'],
+    documentationUrl: `${DOCS_URL}/juice-shop-master`,
+    githubUrl: 'https://github.com/CookieCrack3r/my-dso-blog/tree/main/docs/projects/juice-shop-master',
   },
   {
     name: 'Minecraft',
-    description: PLACEHOLDER_DESCRIPTION,
+    description: [
+      'A self-built Docker image for a vanilla Minecraft Java Edition server.',
+      'The server configuration is rendered from the .env file at every start.',
+      'The world is stored in a named volume and the container restarts automatically after a crash.',
+    ].join('\n'),
     image: '/img/projects/minecraft.webp',
-    technologies: DEFAULT_TECHNOLOGIES,
-    documentationUrl: 'https://github.com/CookieCrack3r/Minecraft_DA#readme',
+    technologies: ['container', 'shell-scripting', 'yaml'],
+    documentationUrl: `${DOCS_URL}/minecraft-server`,
     githubUrl: 'https://github.com/CookieCrack3r/Minecraft_DA',
   },
   {
-    name: 'WordPress hosten',
-    description: PLACEHOLDER_DESCRIPTION,
+    name: 'WordPress Hosting',
+    description: [
+      'WordPress with a MySQL database, operated with Docker Compose.',
+      'Configured through a local .env file, with persistent data in named volumes, a database healthcheck and automatic restarts.',
+    ].join('\n'),
     image: '/img/projects/wordpress.jpg',
-    technologies: DEFAULT_TECHNOLOGIES,
-    documentationUrl: 'https://github.com/CookieCrack3r/Wordpress_DA#readme',
+    technologies: ['container', 'yaml'],
+    documentationUrl: `${DOCS_URL}/wordpress-hosting`,
     githubUrl: 'https://github.com/CookieCrack3r/Wordpress_DA',
   },
 ];
