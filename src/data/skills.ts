@@ -8,7 +8,7 @@ export interface Skill {
   /** Icon size on the desktop cards in px. The mobile carousel scales icons to 45px height. */
   iconWidth: number;
   iconHeight: number;
-  /** Bullet points shown in the mobile carousel. */
+  /** Bullet points shown on the back of the desktop cards and in the mobile carousel. */
   highlights: string[];
 }
 
