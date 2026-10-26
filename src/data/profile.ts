@@ -29,9 +29,9 @@ export const profile: Profile = {
   greeting: 'Hey there. 👋 I am',
   jobTitle: 'DevSecOps Engineer',
   about: [
-    'Write some information about yourself that is IT related.',
-    'For example:',
-    'Why are you passionate about coding? Do you have a deep interest in games? What is your source of inspiration for improving your programming skills? Are you constantly learning and keeping up to date?',
+    'Web- & Backend-Entwickler mit Schwerpunkt DevSecOps und Linux-Serverbetrieb. Aus der Entwicklung mit',
+    'Python/Django kommend, betreibe und sichere ich zwei eigene Linux-Server selbst und verbinde Entwicklung,',
+    'Betrieb und Sicherheit – bei Störungen finde ich lieber die Ursache, als nur das Symptom zu beheben.' 
   ].join('\n'),
   portrait: {
     desktop: '/img/pic.jpeg',
