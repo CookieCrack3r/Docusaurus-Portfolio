@@ -23,6 +23,8 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  /* The name is sized relative to this column (cqi units), so it stays on one line. */
+  container-type: inline-size;
 }
 
 .greeting,
@@ -40,8 +42,9 @@
 }
 
 .name {
-  font-size: clamp(48px, calc(9.6vw - 50px), 88px);
+  font-size: min(88px, 12.5cqi);
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .jobTitle {
@@ -99,7 +102,7 @@
   }
 
   .name {
-    font-size: 48px;
+    font-size: min(48px, 12.5cqi);
     line-height: 0.9;
   }
 
