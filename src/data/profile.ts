@@ -29,9 +29,9 @@ export const profile: Profile = {
   greeting: 'Hey there. 👋 I am',
   jobTitle: 'DevSecOps Engineer',
   about: [
-    'Web- & Backend-Entwickler mit Schwerpunkt DevSecOps und Linux-Serverbetrieb. Aus der Entwicklung mit',
-    'Python/Django kommend, betreibe und sichere ich zwei eigene Linux-Server selbst und verbinde Entwicklung,',
-    'Betrieb und Sicherheit – bei Störungen finde ich lieber die Ursache, als nur das Symptom zu beheben.' 
+    'Web and backend developer focused on DevSecOps and Linux server operations.',
+    'Coming from Python/Django development, I run and secure two Linux servers of my own and bring development, operations and security together.',
+    'When something breaks, I would rather find the root cause than just fix the symptom.',
   ].join('\n'),
   portrait: {
     desktop: '/img/hero/portrait.jpeg',
@@ -44,15 +44,15 @@ export const profile: Profile = {
   contact: {
     headline: 'Contact me',
     tagline: 'Looking forward to hearing from you!',
-    intro: 'Include the Information like:',
+    intro: 'Feel free to reach out with job offers or opportunities, for example if:',
     bullets: [
-      'Feel free to reach out with job offers or opportunities like...',
-      'What role are you looking for?',
-      'How you will contribute to the new team.',
-      'Are you open for remote work or even relocate?',
+      'you are looking for a DevSecOps engineer or backend developer.',
+      'you need someone who automates builds, tests and deployments with CI/CD pipelines and containers.',
+      'security and stable operations matter as much to you as new features.',
+      'you want to talk about Linux servers, containers or automation.',
     ],
   },
   moreProjectsText:
-    'Write some information about your other projects. What other projects have you been working on so far?',
+    'Besides these highlights, you can find more of my projects around Linux servers, containers and automation on my GitHub profile.',
   legalNoticePath: '/legal-notice',
 };
