@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Docusaurus build output and cache
+build/
+.docusaurus/
+.cache-loader/
+
+# Environment files and local tooling
+.env
+.env.*
+.mcp.json
+
+# Logs and OS files
+npm-debug.log*
+.DS_Store
+Thumbs.db
