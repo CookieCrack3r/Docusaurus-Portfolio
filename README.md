@@ -207,7 +207,7 @@ Enable it with `sudo ln -s /etc/nginx/sites-available/portfolio /etc/nginx/sites
 │   │   ├── legal-notice.tsx       Legal notice page
 │   │   └── legal-notice.module.css
 │   └── theme/Navbar/index.tsx     Hides the default Docusaurus navbar
-├── static/img/                    Portrait, project images and icons (icons exported from the Figma design)
+├── static/img/                    Portrait, project images, favicon and icons (icons exported from the Figma design)
 ├── .gitignore                     Files excluded from Git (dependencies, build output, .env files)
 ├── docusaurus.config.ts           Docusaurus configuration
 ├── package.json                   Scripts and dependencies

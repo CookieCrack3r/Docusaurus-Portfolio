@@ -13,6 +13,10 @@ const config: Config = {
   url: siteUrl,
   baseUrl,
   trailingSlash: false,
+  favicon: 'img/favicon.svg',
+  headTags: [
+    {tagName: 'link', attributes: {rel: 'apple-touch-icon', href: `${baseUrl}img/apple-touch-icon.png`}},
+  ],
 
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'throw',
