@@ -72,6 +72,8 @@
   width: 100%;
   max-width: 913px;
   padding: 32px;
+  /* The body layout below depends on the card width, not on the viewport. */
+  container-type: inline-size;
 }
 
 .featured .headline {
@@ -90,23 +92,40 @@
   gap: 4px;
 }
 
+/* Image and details fill the remaining card height: text at the top, buttons at the bottom,
+   and the bottom edge of the image lines up with the bottom edge of the buttons. */
 .featured .body {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 24px;
+  flex: 1;
+  align-items: stretch;
+  gap: 24px 38px;
 }
 
 .featured .image {
-  flex: 0 0 auto;
+  flex: 0 0 355px;
   width: 355px;
-  max-width: 100%;
   height: auto;
-  aspect-ratio: 355 / 240;
+  min-height: 240px;
 }
 
 .featured .details {
-  flex: 0 1 456px;
+  flex: 1 1 0;
+  min-width: 0;
   align-items: flex-end;
+  justify-content: space-between;
+}
+
+/* Narrow cards (small desktops): image above the details */
+@container (max-width: 760px) {
+  .featured .body {
+    flex-direction: column;
+  }
+
+  .featured .image {
+    flex: none;
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 355 / 240;
+  }
 }
 
 .featured .description {
